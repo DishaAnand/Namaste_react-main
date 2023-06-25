@@ -1,0 +1,25 @@
+.headers{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: lightcoral;
+  padding : 10px ;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.logo {
+  height : 50px;
+  width : 50px;
+}
+.headers input[type=text]{
+  display:block;
+  margin: 0 auto;
+  /* display: inline-block; */
+  /* float: right; */
+  padding: 6px;
+  font-size: 17px;
+  margin-bottom: 8px;
+}

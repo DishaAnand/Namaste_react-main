@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin:10px;
+  border: 1px solid black;
+}
+
+
+
+.nav-items >ul{
+  list-style-type: none;
+  display: flex;
+  gap: 2rem
+
+}
+
+.nav-items > ul > li{
+  padding:10px;
+}
+
+.logo{
+  width:140px;
+}
+
+.card{
+  width:200px;
+  padding: 10px;
+  margin: 10px;
+  
+  border: 1px solid black;
+}
+
+.card > img{
+  width:100%;
+}
+
+.rest{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card{
+  width:200px;
+  height:200px;
+  background:lightgray;
+  margin:20px;
+}
