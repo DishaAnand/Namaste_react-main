@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { restroList, swiggyData } from '../../shared/config';
 import RestroCard from './RestroCard';
 import ShimmerUI from '../../shared/ShimmerUI';
+import { Link } from 'react-router-dom';
 
 function filterData(searchText, restro) {
   return restro.filter((restaurant) =>
@@ -74,7 +75,12 @@ const Body = () => {
       </div>
       <div className='rest'>
         {filteredrestro.map((restaurant) => {
-          return <RestroCard {...restaurant.data} key={restaurant.data.id} />;
+          return (
+            <Link to={"/restaurant/" + restaurant.data.id}
+              key={restaurant.data.id}
+            >
+              <RestroCard {...restaurant.data} />
+            </Link>);
         })}
 
         {/* pass individual props */}
@@ -87,7 +93,7 @@ const Body = () => {
     <RestroCard {...restroList[1].data}/>
     <RestroCard {...restroList[2].data}/>
     <RestroCard {...restroList[3].data}/>  */}
-      </div>
+      </div >
     </>
   );
 };

@@ -2,10 +2,11 @@
 
 export const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
-export const name_Saleem_Url = "https://corsproxy.io/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D12.968939%26lng%3D80.186115%26restaurantId%3D41961%26submitAction%3DENTER";
+export const RESTAURANT_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.919476588164903&lng=77.5379522160354&restaurantId=";
 
+export const SUBMIT_URL = "&submitAction=ENTER"
 export const restroList = [
-  
+
   {
     type: "restaurant",
     data: {
