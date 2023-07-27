@@ -3,12 +3,9 @@ import { restroList, swiggyData } from '../../shared/config';
 import RestroCard from './RestroCard';
 import ShimmerUI from '../../shared/ShimmerUI';
 import { Link } from 'react-router-dom';
+import { filterData } from '../../utils/Helper';
+import useOnline from '../../utils/useOnline';
 
-function filterData(searchText, restro) {
-  return restro.filter((restaurant) =>
-    restaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase())
-  );
-}
 
 const Body = () => {
   //const searchTxt = "kfc" //creating variable in js
@@ -35,6 +32,13 @@ const Body = () => {
       setfileteredestro(swiggyData?.data?.cards?.[2]?.data?.data?.cards);
     }, 1000);
   };
+
+
+  const isOnline = useOnline()
+
+  if (!isOnline) {
+    return <h1>Please check your internet connection</h1>
+  }
 
   //Conditional Rendering
   //if rest is empty then shimmer ui else normal ui
