@@ -21,7 +21,7 @@ import useOnline from "../../utils/useOnline";
 
 const Title = () => (
   <a href="/">
-    <img className="logo"
+    <img className="h-28 px-4"
       alt="logo" src="https://yt3.googleusercontent.com/ytc/AMLnZu_EC-ECXAxRAixWGEfMsE1rdSoetBHyxmLNdtCB=s900-c-k-c0x00ffffff-no-rj" />
   </a>
 )
@@ -35,15 +35,15 @@ const Header = () => {
   const isOnline = useOnline()
 
   return (
-    <div className="header">
+    <div className="flex justify-between bg-pink-100 shadow-md sm:bg-blue-100">
       <Title />
       <div className="nav-items">
-        <ul>
-          <Link to="/"> Home </Link>
-          <Link to="/about"> About </Link>
-          <Link to="/contact"> contact us </Link>
-          <li>Cart</li>
-          <Link to="/instamart"> Instamart </Link>
+        <ul className="flex py-10 ">
+          <Link to="/"><li className="px-2"> Home </li></Link>
+          <Link to="/about"><li className="px-2">  About </li></Link>
+          <Link to="/contact"> <li className="px-2">contact us </li></Link>
+          <li className="px-2">Cart</li>
+          <Link to="/instamart"><li className="px-2">  Instamart </li></Link>
         </ul>
       </div>
       <h1>{isOnline ? '✅' : '❌'}</h1>

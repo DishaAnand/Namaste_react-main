@@ -53,10 +53,10 @@ const Body = () => {
     <ShimmerUI />
   ) : (
     <>
-      <div className='searchContainer'>
+      <div className='searchContainer p-5 bg-pink-100 m-2'>
         <input
           type='text'
-          className='search'
+          className='focus:bg-gray-100 p-2 m-2'
           placeholder='Search'
           value={searchText}
           onChange={(e) => {
@@ -65,7 +65,7 @@ const Body = () => {
           }}
         />
         <button
-          className='search-btn'
+          className='p-2 m-2 bg-purple-400 rounded-md hover:bg-purple-600'
           onClick={() => {
             //need to filter the data, passing "restro" in searchtext so that on click of search button it shld filter restro
             const data = filterData(searchText, allRestaurants);
@@ -77,7 +77,7 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className='rest'>
+      <div className='flex flex-wrap'>
         {filteredrestro.map((restaurant) => {
           return (
             <Link to={"/restaurant/" + restaurant.data.id}
